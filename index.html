@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KNQ Transportes de Personal</title>
+
+<link rel="icon" href="img/logo.jpg" type="image/jpeg">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans text-gray-700 overflow-x-hidden">
+
+    <!--HEADER-->
+<header class="fixed w-full bg-white/95 backdrop-blur shadow z-50">
+
+<!-- FRANJA -->
+<div class="h-6 bg-[#096eb4]"></div>
+
+<div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+<!-- LOGO -->
+<div>
+<img src="img/logo.png" class="h-10 md:h-12 object-contain"></div>
+
+<!-- NAV -->
+<nav class="hidden md:flex space-x-10 font-medium text-lg text-gray-700">
+<a href="#nosotros" class="hover:text-[#096eb4] transition">Sobre Nosotros</a>
+<a href="#servicios" class="hover:text-[#096eb4] transition">Nuestros Servicios</a>
+<a href="#flota" class="hover:text-[#096eb4] transition">Nuestra Flota</a>
+</nav>
+
+<!-- CTA -->
+<a href="#contacto" 
+class="bg-[#ECC94B] text-black px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition shadow-md">
+Cotizar Ahora
+</a>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0">
+<video autoplay muted loop class="absolute w-full h-full object-cover">
+  <source src="img/hero.mp4" type="video/mp4">
+</video>
+
+<div class="absolute inset-0 bg-black/60"></div>
+
+<div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6">
+
+<div class="text-white space-y-6">
+<h1 class="text-4xl font-bold">
+Empresa Líder en Transporte de Personal en México con más de 30 años de experiencia.
+</h1>
+
+<p>
+Ofrecemos un servicio de calidad excepcional guiados por valores sólidos.
+</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow-2xl">
+<h1 class="text-xl font bold mb-4">Contáctanos</h1>
+<h3 class="text-xl font-bold mb-4">¿Necesitas una cotización urgente?</h3>
+
+<input class="input" placeholder="Nombre">
+<input class="input" placeholder="Correo Corporativo">
+<input class="input" placeholder="Celular / WhatsApp">
+
+<button class="btn-primary">Solicitar Llamada</button>
+</div>
+
+</div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="section">
+<h2 class="title">Movilidad inteligente basada en valores.</h2>
+
+<p class="text-center max-w-3xl mx-auto mb-10">
+Somos una empresa orgullosamente mexicana líder en transporte de personal...
+</p>
+
+<div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+<div class="reveal"><h3>Orden impecable</h3></div>
+<div class="reveal"><h3>Puntualidad absoluta</h3></div>
+<div class="reveal"><h3>Programación inteligente</h3></div>
+</div>
+</section>
+
+<section class="section bg-gray-100 overflow-hidden">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 items-center">
+
+<!-- TEXTO IZQUIERDA -->
+<div>
+<h2 class="text-5xl font-bold text-[#1A365D] mb-6 leading-tight">
+Medidas que nos distinguen
+</h2>
+
+<div class="flex gap-3 mt-6">
+<button id="prevBtn" class="bg-[#096eb4] text-white w-12 h-12 rounded-full">←</button>
+<button id="nextBtn" class="bg-[#096eb4] text-white w-12 h-12 rounded-full">→</button>
+</div>
+</div>
+
+<!-- CARRUSEL DERECHA -->
+<div class="md:col-span-2 overflow-hidden">
+
+<div id="carousel" class="flex flex-col md:flex-row gap-6 transition-transform duration-500">
+
+<!-- CARD -->
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/personal.jpeg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Reglamento interno</h3>
+<p class="text-sm">Cumplimiento estricto del reglamento interno de la empresa del cliente.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/pq2.jpg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Respeto total</h3>
+<p class="text-sm">Respeto total al reglamento de tránsito.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/pq3.jpeg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Seguridad del operador</h3>
+<p class="text-sm">Pruebas de antidoping periodicas a todos los operadores.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/pq4.jpeg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Inspección constante</h3>
+<p class="text-sm">Inspección de licencias vigentes diariamente.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/personal.jpeg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Higiene y limpieza</h3>
+<p class="text-sm">Protocolos avanzados de higiene y prevención post covid. <br>
+    Limpieza y sanitización profunda diariamente.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/pq2.jpg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Registro y Protección</h3>
+<p class="text-sm">Registro digital de abordaje como plan de protección. <br>
+Control preciso de aforos y distribución de pasajeros.</p>
+</div>
+</div>
+
+<div class="w-full md:min-w-[48%] bg-white rounded-xl shadow">
+<img src="img/pq4.jpeg" class="h-48 w-full object-cover">
+<div class="p-4">
+<h3 class="font-bold text-[#096eb4]">Monitoreo y registro</h3>
+<p class="text-sm">Control digital de pasajeros.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section bg-[#096eb4] text">
+<h2 class="title" style="color: beige;">Nuestros servicios</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+<div class="bg-white p-6 rounded shadow hover:scale-105 transition">
+<img src="img/transporte.jpg" class="rounded mb-4">
+<h3 class="font-bold text-xl mb-3">Transporte de personal</h3>
+<p>
+Ofrecemos rutas diarias, seguras y altamente eficientes para tu fuerza laboral...
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow hover:scale-105 transition">
+<img src="img/ejecutivo.jpg" class="rounded mb-4">
+<h3 class="font-bold text-xl mb-3">Transporte ejecutivo</h3>
+<p>
+Brindamos un servicio personalizado en vehículos compactos de lujo...
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow hover:scale-105 transition">
+<img src="img/van.avif" class="rounded mb-4">
+<h3 class="font-bold text-xl mb-3">Van versatilidad y agilidad</h3>
+<p>
+Garantizamos un entorno de confort premium...
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- VALORES -->
+<section class="section text-center">
+<h2 class="title">Priorizamos</h2>
+
+<div class="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto font-semibold">
+<div>Compromiso</div>
+<div>Seguridad</div>
+<div>Calidad</div>
+<div>Puntualidad</div>
+<div>Mejora continua</div>
+<div>Respeto</div>
+<div>Planeación</div>
+<div>Responsabilidad</div>
+<div>Trabajo en equipo</div>
+</div>
+</section>
+
+<!-- CLIENTES -->
+<section class="section bg-white overflow-hidden">
+<h2 class="title text-center">Nuestros clientes</h2>
+
+<div class="carousel space-x-16 items-center">
+
+<img src="img/clientes/upra.png" class="h-12">
+<img src="img/clientes/utc.png" class="h-12">
+<img src="img/clientes/psw.png" class="h-12">
+<img src="img/clientes/control.png" class="h-12">
+<img src="img/clientes/uts.png" class="h-12">
+<img src="img/clientes/p.png" class="h-12">
+<img src="img/clientes/martinrea.png" class="h-12">
+<img src="img/clientes/jeonjin.png" class="h-12">
+
+<!-- duplicado -->
+<img src="img/clientes/upra.png" class="h-12">
+<img src="img/clientes/utc.png" class="h-12">
+<img src="img/clientes/psw.png" class="h-12">
+<img src="img/clientes/control.png" class="h-12">
+<img src="img/clientes/uts.png" class="h-12">
+<img src="img/clientes/p.png" class="h-12">
+<img src="img/clientes/martinrea.png" class="h-12">
+<img src="img/clientes/jeonjin.png" class="h-12">
+
+<!-- duplicado -->
+<img src="img/clientes/upra.png" class="h-12">
+<img src="img/clientes/utc.png" class="h-12">
+<img src="img/clientes/psw.png" class="h-12">
+<img src="img/clientes/control.png" class="h-12">
+<img src="img/clientes/uts.png" class="h-12">
+<img src="img/clientes/p.png" class="h-12">
+<img src="img/clientes/martinrea.png" class="h-12">
+<img src="img/clientes/jeonjin.png" class="h-12">
+
+</div>
+</section>
+
+<!-- FLOTA -->
+<section id="flota" class="section bg-gray-100 text-center">
+<h2 class="title">Nuestra Flota</h2>
+
+<p class="max-w-3xl mx-auto mb-10">
+La seguridad no es una opción, es nuestra base operativa.
+Sin importar el tamaño de la unidad, cada vehículo cumple con un estricto protocolo de confianza que garantiza un viaje sin riesgos.
+
+</p>
+
+<img src="img/flota.jpeg" 
+class="rounded shadow mx-auto mb-10 w-[70%] md:w-full md:max-w-4xl h-auto">
+<div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-3">Seguridad integral</h3>
+<p>
+Cinturones, botiquín y extintor vigente
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-3">Tecnología</h3>
+<p>
+Wifi, GPS, geolocalización 24/7 y cámaras
+</p>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-3">Garantía Operativa</h3>
+<p>
+Check-list diario y mantenimiento preventivo
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section bg-[#2D3748] text-white">
+<div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+<div>
+<h2 class="text-3xl font-bold mb-6">Contáctanos</h2>
+
+<input class="input text-black" placeholder="Nombre y Apellido">
+<input class="input text-black" placeholder="Empresa">
+<input class="input text-black" placeholder="Correo">
+<input class="input text-black" placeholder="Teléfono">
+
+<select class="input text-black">
+<option>Tipo de servicio</option>
+<option>Personal</option>
+<option>Ejecutivo</option>
+<option>Van</option>
+</select>
+
+<textarea class="input text-black" placeholder="Mensaje"></textarea>
+
+<button class="btn-primary text-black">
+Enviar Solicitud de Cotización
+</button>
+</div>
+
+<div>
+<h3 class="text-xl font-bold mb-4">Contacto directo</h3>
+<p>📞 Llamar a oficinas</p>
+<p>✉ ventas@empresa.com</p>
+
+<ul class="mt-6 space-y-2">
+<li>Compromiso</li>
+<li>Calidad</li>
+<li>Respeto</li>
+<li>Responsabilidad</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center p-6">
+© 2025 Empresa de Transporte
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

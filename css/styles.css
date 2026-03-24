@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reutilizables */
+.section {
+  padding: 80px 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #1A365D;
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #ECC94B;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Carrusel */
+.carousel {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
